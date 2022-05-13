@@ -1,17 +1,20 @@
-var Persona = /** @class */ (function () {
-    function Persona(anioNacimiento, nombre) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Persona = void 0;
+class Persona {
+    constructor(anioNacimiento, nombre) {
         this.nacimiento = anioNacimiento;
         this.nombre = nombre;
     }
-    Persona.prototype.cualEsTuNombre = function () {
+    cualEsTuNombre() {
         return "Mi nombre es " + this.nombre.split("  ");
-    };
+    }
     ;
-    Persona.prototype.cualEsTuEdad = function () {
+    cualEsTuEdad() {
         return "Mi edad es ";
-    };
+    }
     ;
-    Persona.prototype.cualEsTuGeneracion = function () {
+    cualEsTuGeneracion() {
         if (this.nacimiento < 1975) {
             return "Soy un Baby Boomer";
         }
@@ -24,15 +27,10 @@ var Persona = /** @class */ (function () {
         if (this.nacimiento < 2010) {
             return "Soy un Alfa";
         }
-    };
-    Persona.prototype.calculartuEdad = function () {
+    }
+    calculartuEdad() {
         return "mi edad es " + (2022 - this.nacimiento);
-    };
-    return Persona;
-}());
+    }
+}
+exports.Persona = Persona;
 ;
-// Termina la definicion de la class persona 
-var fede = new Persona(1984, "Federico");
-console.log(fede.cualEsTuNombre());
-console.log(fede.cualEsTuGeneracion());
-console.log(fede.calculartuEdad());

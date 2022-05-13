@@ -1,4 +1,4 @@
-class Persona {
+export class Persona {
     private nacimiento: number; 
     private nombre: string;
 
@@ -35,11 +35,3 @@ class Persona {
         return "mi edad es "+ (2022- this.nacimiento) 
     }
 };
-  // Termina la definicion de la class persona 
-
-let fede = new Persona(1984, "Federico");
-console.log(fede.cualEsTuNombre());
-console.log(fede.cualEsTuGeneracion());
-console.log(fede.calculartuEdad());
-    
-
